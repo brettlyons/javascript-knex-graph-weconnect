@@ -22,7 +22,6 @@ exports.seed = function(knex, Promise) {
     var fId = results[7][0];
     
     return Promise.join(
-      knex('connections').insert({user_id: aId, other_id: bId}),
       knex('connections').insert({user_id: aId, other_id: dId}),
       knex('connections').insert({user_id: aId, other_id: cId}),
       knex('connections').insert({user_id: bId, other_id: dId}),
