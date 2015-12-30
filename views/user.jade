@@ -3,8 +3,8 @@ extends layout
 block content
   h1= user.name
 
-  = JSON.stringify(connections)
   ul
-    for connection in connections
-      li
-        a(href="/users/" + connection.id)= connection.name
+  for r, k in results
+    li
+      a(href="/users/" + k)= list[k].name
+      span= r
